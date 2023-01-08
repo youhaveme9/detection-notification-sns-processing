@@ -17,7 +17,7 @@ database = r"/home/youhaveme/yoloCar/sns-processing/cars_database.db"
 
 # loading custom trained model
 model = torch.hub.load('ultralytics/yolov5', 'custom',
-                       path='best.pt', force_reload=True)
+                       path='model/best.pt', force_reload=True)
 
 def detect_license_number(path):
     # detecting license plate number 
