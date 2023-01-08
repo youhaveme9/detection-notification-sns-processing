@@ -28,11 +28,4 @@ def select_all_tasks(conn):
     rows = cur.fetchall()
     return rows
 
-    # for row in rows:
-    #     print(row)
-
-    # create a database connection
-# conn = create_connection(database)
-
-# select_all_tasks(conn)
 
