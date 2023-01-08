@@ -1,5 +1,5 @@
 import requests
-# from main import test_str
+
 
 BASE_URL = "https://1aksik8wwi.execute-api.ap-south-1.amazonaws.com/dev"
 Header = {
