@@ -31,10 +31,11 @@ cd ..
 ```
 
 <p> 5. Add pytesseract to the system path </p>
-<p>Refer this [link](https://pypi.org/project/pytesseract) for pytesseract installation</p>
+<p> Refer this link - https://pypi.org/project/pytesseract for pytesseract installation</p>
 
 <p> 6. Run main.py </p>
 
 ```bash 
-python3 main.py```
+python3 main.py
+```
 
