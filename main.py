@@ -50,7 +50,7 @@ def main():
         finalExtract = ''.join(letter for letter in extract if letter.isalnum())
         print(finalExtract)
 
-        cv2.imshow('YOLO', np.squeeze(results.render()))
+        cv2.imshow('License Plate Detection', np.squeeze(results.render()))
         if (finalExtract == "nodetections"):
             continue
         if (finalExtract == "1plate" and isExist == False):
