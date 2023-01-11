@@ -16,9 +16,13 @@ import send_data
 database = r"/home/youhaveme/yoloCar/sns-processing/cars_database.db"
 
 # loading custom trained model
-model = torch.hub.load('ultralytics/yolov5', 'custom',
+try:
+    model = torch.hub.load('ultralytics/yolov5', 'custom',
                        path='model/best.pt', force_reload=True)
+except Exception as e:
+    print(e)
 
+    
 def detect_license_number(path):
     # detecting license plate number 
     raw_number = pytesseract.image_to_string(
@@ -32,9 +36,13 @@ def detect_license_number(path):
     # sending notification
     for rows in data:
         if rows[1] == car_number:
-            send_data.send_update(car_number)
-            send_data.send_update_to_app(car_number)
-            send_data.update_tracking_details(car_number)
+            try:
+                send_data.send_update(car_number)
+                send_data.send_update_to_app(car_number)
+                send_data.update_tracking_details(car_number)
+            except Exception as e:
+                print(e)
+                break
         subprocess.run(
             ["rm -r /home/youhaveme/yoloCar/runs/detect"], shell=True)
 
