@@ -1,4 +1,4 @@
-# License Plate number detection and notification system
+# License Plate number detection and notification system for Smart Naka
 For ethos 2022 IIT Guwahati
 
 ## How to run on local system? 
